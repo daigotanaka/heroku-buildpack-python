@@ -97,6 +97,8 @@ export PKG_CONFIG_PATH=/app/.heroku/vendor/lib/pkg-config:$BUILD_DIR/.heroku/ven
 # Added by Daigo: Add R path to PATH
 export PATH=/app/vendor/R/bin:$PATH
 echo PATH=$PATH
+export LD_LIBRARY_PATH=/app/vendor/R/lib64/R/modules:/app/vendor/R/lib64/R/lib:$LD_LIBRARY_PATH
+echo LD_LIBRARY_PATH=$LD_LIBRARY_PATH
 
 # Switch to the repo's context.
 cd $BUILD_DIR
